@@ -1,20 +1,32 @@
 import requests
 import json
-from markov import MarkovChain
 
 class BuzzfeedManager:
-    def __init__(self):
-        self.titles = []
+
+    def __init__(self, query):
+        self.query = query
         
-    def get(self, query):
-        r = requests.get('http://www.buzzfeed.com/api/v2/feeds/'+query)
+    def get(self, page):
+        r = requests.get('http://www.buzzfeed.com/api/v2/feeds/'+self.query+'?p='+str(page))
         self.buzzfeed_json = r.json()
         
-    # def train(self):
-    #     for titles in self.buzzfeed_json
+        return self.buzzfeed_json
+        
+    def read_titles(self, pages=5):
+        seen = set()
+        unique = []
+
+        for page in range(pages):
+            for buzz in self.get(page)['buzzes']:
+                title = buzz['title'] 
+                title = title.replace('&quot;', '\'')
+                if title not in seen:
+                    unique.append(title)
+                    seen.add(title)
+        return unique
 
 
 if __name__ == '__main__':
-    buzzfeed = BuzzfeedManager()
-    buzzfeed.get('index')
-    print buzzfeed.buzzfeed_json[0]
+    buzzfeed = BuzzfeedManager('lol')
+    buzzfeed.read_titles()
+    # print buzzfeed.buzzfeed_json['buzzes'][7]['title']

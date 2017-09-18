@@ -2,6 +2,7 @@
 
 import src.markov as markov
 from markov import MarkovChain
+from buzzfeedmanager import BuzzfeedManager
 
 from . import args
 
@@ -11,9 +12,12 @@ class MarkovMusic:
         self.args = args
 
     def run(self):
-        
-        f = open("bible.txt", "r") #opens file with name of "test.txt"
         mc = MarkovChain(1)
-        mc.add_string(f.read())
-        markovOut = ' '.join(mc.generate_text(50))
+        manager = BuzzfeedManager('lol')
+        training_data = manager.read_titles()
+        
+        for title in training_data:
+            mc.add_string(title)
+        
+        markovOut = ' '.join(mc.generate_text(22))
         print markovOut
