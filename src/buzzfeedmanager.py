@@ -23,6 +23,7 @@ class BuzzfeedManager:
                 if title not in seen:
                     unique.append(title)
                     seen.add(title)
+        print len(unique)
         return unique
 
 

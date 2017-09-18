@@ -12,7 +12,7 @@ class MarkovMusic:
         self.args = args
 
     def run(self):
-        mc = MarkovChain(1)
+        mc = MarkovChain(2)
         manager = BuzzfeedManager('lol')
         training_data = manager.read_titles()
         
