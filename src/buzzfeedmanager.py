@@ -11,7 +11,7 @@ class BuzzfeedManager:
 
         return self.buzzfeed_json
 
-    def read_titles(self, pages=5):
+    def read_titles(self, pages=50):
         seen = set()
         unique = []
 
