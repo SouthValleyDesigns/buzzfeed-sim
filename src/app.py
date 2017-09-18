@@ -6,12 +6,13 @@ from buzzfeedmanager import BuzzfeedManager
 
 from . import args
 
-class MarkovMusic:
+class BuzzfeedSimulator:
 
     def __init__(self):
         self.args = args
 
     def run(self):
+<<<<<<< HEAD
         mc = MarkovChain(2)
         manager = BuzzfeedManager('lol')
         training_data = manager.read_titles()
@@ -21,3 +22,11 @@ class MarkovMusic:
         
         markovOut = ' '.join(mc.generate_text(22))
         print markovOut
+=======
+
+        f = open("bible.txt", "r") #opens file with name of "test.txt"
+        mc = MarkovChain(1)
+        mc.add_string(f.read())
+        markovOut = ' '.join(mc.generate_text(50))
+        print markovOut
+>>>>>>> 67af8b4c6cf52ec928923a078d471e3ffbbab785

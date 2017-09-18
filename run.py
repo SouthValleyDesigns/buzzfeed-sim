@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from src.app import MarkovMusic
+from src.app import BuzzfeedSimulator
 
-app = MarkovMusic()
+app = BuzzfeedSimulator()
 
 app.run()
