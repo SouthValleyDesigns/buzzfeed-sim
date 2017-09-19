@@ -339,8 +339,6 @@ html, body {
 /* line 157, ../sass/main.scss */
 .main-content {
   padding-top: 0px !important;
-  height: 100vh !important;
-  color: white;
   text-align: center;
   position: relative;
   background-attachment: fixed;
