@@ -19,4 +19,4 @@ class BuzzfeedSimulator:
             mc.add_string(title)
 
         markovOut = ' '.join(mc.generate_text(30))
-        print markovOut
+        return markovOut
