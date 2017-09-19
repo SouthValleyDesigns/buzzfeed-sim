@@ -1,0 +1,336 @@
+@import 'mixins';
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none !important;
+    @include transitions(0.5s);
+}
+
+strong {
+    color: rgb(0,53,95);
+}
+
+.navbar {
+    border: 0px;
+    // background-color: black !important;
+    min-height: 0;
+    @include transitions(0.25s);
+}
+
+.navbar.scrolldown {
+    background-color: rgba(0,53,95, 1) !important;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand img{
+    // border-radius: 0 0 15px 0;
+    max-width: 400px;
+    width: 95%;
+}
+
+@media screen and (max-width: 768px) {
+ .navbar {
+      border: 0px;
+  }
+
+  .navbar-header {
+    padding: 15px;
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar-brand {
+    width: 75% !important;
+    float: none;
+  }
+}
+
+.header {
+    // @include backgroundImage("../images/Scenic Southern Oregon 2013  Beautifulvista.jpg");
+    background-position: center;
+    text-align: center;
+    color: white;
+    height: 80vh;
+}
+
+.autoscroll {
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    position: absolute;
+
+    a {
+        bottom: 0;
+        color: white;
+        text-decoration: none;
+    }
+
+    .scrollbox {
+        top: 0;
+
+        .glyphicon {
+            font-size: 25px;
+        }
+    }
+
+    .scrolldown {
+        font-size: 3em;
+        position: absolute;
+        margin-left: -19px;
+        margin-bottom: -14px;
+    }
+
+    .scrolldownarrow {
+        font-size: 1.3em;
+        z-index: -1;
+        display: block;
+    }
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.20;
+    font-weight: 700;
+    opacity: 1.0;
+    letter-spacing: -0.72px;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    font-weight: 600;
+    opacity: 1.0;
+    letter-spacing: -0.72px;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    opacity: 0.9;
+    letter-spacing: 0;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+span, p {
+    font-family: "Open Sans", sans-serif;
+    line-height: 2;
+    font-weight: 400;
+    opacity: 0.7;
+    letter-spacing: -0.06px;
+    word-spacing: 0;
+    text-transform: none;
+    margin-top: 0;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-content {
+    padding-top: 0px !important;
+    height: 100vh !important;
+    color: white;
+    text-align: center;
+    position: relative;
+
+    // &:before {
+    //     content: "";
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     // bottom: 0;
+    //     z-index: - 1;
+    //
+    //     display: block;
+    //     @include backgroundImage("https://www.legalstudies.com/wp-content/uploads/Paralegal-experience-law-school.jpg");
+    //     width: 100%;
+    //     height: 100vh;
+    //
+    //     @include blurs(6px);
+    // }
+
+    // @include backgroundImage("../images/Scenic Southern Oregon 2013  Beautifulvista.jpg");
+
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container {
+    color: #ffffff;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.section {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.section:first-child {
+    height: 90vh;
+}
+
+.section:not(:first-child) {
+    padding-top: 125px;
+    padding-bottom: 40px;
+    background-color: #f3f3f3;
+}
+
+.profile-pic {
+    transition: .5s;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1.75em;
+    @include box_shadow(1);
+}
+
+.profile-pic:hover {
+    @include box_shadow(4);
+    -webkit-transform: translate3d(0, -5%, 0);
+    transform: translate3d(0, -5%, 0);
+}
+
+@media (max-width: 640px) {
+    .profile-pic {
+        display: none;
+    }
+}
+
+.flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+    margin-right: 15px;
+}
+
+.profile-pic, .front, .back {
+    width: 144px;
+    height: 144px;
+    border-radius: 50% !important;
+}
+
+.card-link:hover {
+    color: black;
+}
+
+.paragraph-text {
+    width: 60%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 20px;
+}
+
+#works {
+
+    a {
+        color: black;
+    }
+
+    a:hover {
+        color: (lighten(rgb(0,53,95), 20%));
+    }
+}
+
+#toolbox {
+    .row {
+        padding-bottom: 30px;
+    }
+    h1 {
+        color: white;
+    }
+
+    background-attachment: fixed;
+    @include backgroundImage("../images/Scenic Southern Oregon 2013  Beautifulvista.jpg");
+}
+
+#resume {
+    .card {
+        border: 0px;
+        padding: 20px;
+        @include transitions(0.5s);
+        @include box_shadow(1);
+    }
+
+    .card:hover {
+        @include box_shadow(3);
+        -webkit-transform: translate3d(0, -0.5%, 0);
+        transform: translate3d(0, -0.5%, 0);
+    }
+}
+
+footer {
+
+    a {
+        color: rgb(238, 56, 36);
+    }
+
+    a:hover {
+        color: gray !important;
+    }
+
+    div {
+        text-align: center !important;
+    }
+
+    .bs-docs-footer-links {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+    .bs-docs-footer-links li {
+        display: inline-block;
+    }
+    .bs-docs-footer-links li + li {
+        margin-left: 15px;
+    }
+
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgb(238, 56, 36);
+    background-color: white;
+}
