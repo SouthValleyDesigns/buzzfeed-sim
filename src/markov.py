@@ -33,9 +33,9 @@ class MarkovChain:
 
     def __add_source_data(self, str):
         clean_str = self._punctuation_regex.sub(' ', str).lower()
-        clean_str.replace('.', ' END_SENTENCE')
-        if clean_str[len(clean_str) - 1] != '.':
-            clean_str += ' END_SENTENCE'
+        # clean_str.replace('.', ' END_SENTENCE')
+        # if clean_str[len(clean_str) - 1] != '.':
+        #     clean_str += ' END_SENTENCE'
         tuples = self.__generate_tuple_keys(clean_str.split())
         for t in tuples:
             self.lookup_dict[t[0]].append(t[1])
@@ -65,12 +65,12 @@ class MarkovChain:
                 next_choices = self.lookup_dict[tuple(context)]
                 if len(next_choices) > 0:
                     next_word = random.choice(next_choices)
-                    if next_word == 'END_SENTENCE':
-                        context.append(next_word)
-                        context.popleft()
-                    else:
-                        context.append(next_word)
-                        output.append(context.popleft())
+                    # if next_word == 'END_SENTENCE':
+                    #     context.append(next_word)
+                    #     context.popleft()
+                    # else:
+                    context.append(next_word)
+                    output.append(context.popleft())
                 else:
                     break
             # print(self.lookup_dict)
