@@ -6,6 +6,7 @@ from django.utils import timezone
 
 class Article(models.Model):
     title = models.CharField(max_length=50)
+    image_url = models.CharField(max_length=500, default='')
     content = models.TextField(max_length=2500)
     created_date = models.DateTimeField(default=timezone.now)
 

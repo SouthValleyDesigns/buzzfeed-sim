@@ -1,1 +1,2 @@
-from app import BuzzfeedSimulator
+from .app import BuzzfeedSimulator
+from .scraper import ImageScraper
