@@ -26,7 +26,3 @@ class ImageScraper:
             ActualImages.append((link,Type))
 
         return ActualImages[0][0]
-
-if __name__=='__main__':
-    scraper = ImageScraper()
-    print scraper.get_image('haha')
