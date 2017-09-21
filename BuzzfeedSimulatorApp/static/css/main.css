@@ -235,7 +235,10 @@ strong {
 }
 /* line 60, ../sass/main.scss */
 .header {
-  background-position: center;
+  background-image: url("/static/images/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   text-align: center;
   color: white;
   height: 80vh;
@@ -337,30 +340,22 @@ html, body {
 }
 
 /* line 157, ../sass/main.scss */
-.main-content {
-  padding-top: 0px !important;
-  text-align: center;
-  position: relative;
-  background-attachment: fixed;
-}
-
-/* line 186, ../sass/main.scss */
 .container {
   display: flex;
   flex-direction: column;
 }
 
-/* line 191, ../sass/main.scss */
+/* line 162, ../sass/main.scss */
 .text-container {
   color: #ffffff;
 }
 
-/* line 195, ../sass/main.scss */
+/* line 166, ../sass/main.scss */
 .row {
   flex-direction: row;
 }
 
-/* line 199, ../sass/main.scss */
+/* line 170, ../sass/main.scss */
 .section {
   width: 100%;
   z-index: 1;
@@ -372,19 +367,19 @@ html, body {
   justify-content: center;
 }
 
-/* line 210, ../sass/main.scss */
+/* line 181, ../sass/main.scss */
 .section:first-child {
   height: 90vh;
 }
 
-/* line 214, ../sass/main.scss */
+/* line 185, ../sass/main.scss */
 .section:not(:first-child) {
   padding-top: 125px;
   padding-bottom: 40px;
   background-color: #f3f3f3;
 }
 
-/* line 220, ../sass/main.scss */
+/* line 191, ../sass/main.scss */
 .profile-pic {
   transition: .5s;
   margin-left: 10px;
@@ -393,7 +388,7 @@ html, body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-/* line 228, ../sass/main.scss */
+/* line 199, ../sass/main.scss */
 .profile-pic:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   -webkit-transform: translate3d(0, -5%, 0);
@@ -401,12 +396,12 @@ html, body {
 }
 
 @media (max-width: 640px) {
-  /* line 235, ../sass/main.scss */
+  /* line 206, ../sass/main.scss */
   .profile-pic {
     display: none;
   }
 }
-/* line 240, ../sass/main.scss */
+/* line 211, ../sass/main.scss */
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -415,40 +410,40 @@ html, body {
   margin-right: 15px;
 }
 
-/* line 248, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 .profile-pic, .front, .back {
   width: 144px;
   height: 144px;
   border-radius: 50% !important;
 }
 
-/* line 254, ../sass/main.scss */
+/* line 225, ../sass/main.scss */
 .card-link:hover {
   color: black;
 }
 
-/* line 258, ../sass/main.scss */
+/* line 229, ../sass/main.scss */
 .paragraph-text {
   width: 60%;
   min-width: 200px;
   margin-bottom: 20px;
 }
 
-/* line 264, ../sass/main.scss */
+/* line 235, ../sass/main.scss */
 .card {
   padding: 20px;
 }
 
-/* line 270, ../sass/main.scss */
+/* line 241, ../sass/main.scss */
 #works a {
   color: black;
 }
-/* line 274, ../sass/main.scss */
+/* line 245, ../sass/main.scss */
 #works a:hover {
   color: #006ec5;
 }
 
-/* line 279, ../sass/main.scss */
+/* line 250, ../sass/main.scss */
 #toolbox {
   background-attachment: fixed;
   background-image: url("../images/Scenic Southern Oregon 2013  Beautifulvista.jpg");
@@ -456,16 +451,16 @@ html, body {
   background-repeat: no-repeat;
   background-position: center center;
 }
-/* line 280, ../sass/main.scss */
+/* line 251, ../sass/main.scss */
 #toolbox .row {
   padding-bottom: 30px;
 }
-/* line 283, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 #toolbox h1 {
   color: white;
 }
 
-/* line 292, ../sass/main.scss */
+/* line 263, ../sass/main.scss */
 #resume .card {
   border: 0px;
   padding: 20px;
@@ -476,14 +471,14 @@ html, body {
   transition: 0.5s;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-/* line 299, ../sass/main.scss */
+/* line 270, ../sass/main.scss */
 #resume .card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   -webkit-transform: translate3d(0, -0.5%, 0);
   transform: translate3d(0, -0.5%, 0);
 }
 
-/* line 306, ../sass/main.scss */
+/* line 277, ../sass/main.scss */
 footer {
   text-align: center;
   padding-top: 30px;
@@ -491,28 +486,28 @@ footer {
   color: #ee3824;
   background-color: white;
 }
-/* line 308, ../sass/main.scss */
+/* line 279, ../sass/main.scss */
 footer a {
   color: #ee3824;
 }
-/* line 312, ../sass/main.scss */
+/* line 283, ../sass/main.scss */
 footer a:hover {
   color: gray !important;
 }
-/* line 316, ../sass/main.scss */
+/* line 287, ../sass/main.scss */
 footer div {
   text-align: center !important;
 }
-/* line 320, ../sass/main.scss */
+/* line 291, ../sass/main.scss */
 footer .bs-docs-footer-links {
   padding-left: 0;
   margin-bottom: 20px;
 }
-/* line 324, ../sass/main.scss */
+/* line 295, ../sass/main.scss */
 footer .bs-docs-footer-links li {
   display: inline-block;
 }
-/* line 327, ../sass/main.scss */
+/* line 298, ../sass/main.scss */
 footer .bs-docs-footer-links li + li {
   margin-left: 15px;
 }

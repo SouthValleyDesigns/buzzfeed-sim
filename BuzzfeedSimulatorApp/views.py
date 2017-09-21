@@ -9,12 +9,13 @@ app = BuzzfeedSimulator()
 scraper = ImageScraper()
 
 def index(request):
+    articles = Article.objects.order_by('created_date').reverse()
+    return render(request, 'index.html', {'articles': articles})
+
+def create(request):
     title = app.run()
     image = scraper.get_image(title)
 
     article = Article(title=title, image_url=image, content="Descriptions comin soon")
     article.save()
-    # print type(image
-
-    articles = Article.objects.order_by('created_date').reverse()
-    return render(request, 'index.html', {'articles': articles})
+    return render(request, 'redirect.html', {})
