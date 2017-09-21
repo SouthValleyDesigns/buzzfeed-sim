@@ -2,14 +2,15 @@
 from __future__ import unicode_literals
 
 from .models import Article
-# from src.app import BuzzfeedSimulator
+from titlegenerator import BuzzfeedSimulator
 from django.shortcuts import render
 
-# app = BuzzfeedSimulator()
+app = BuzzfeedSimulator()
 
 def index(request):
+    title = app.run()
 
-    article = Article(title="First Blog", content="This is the body")
+    article = Article(title=title, content="Descriptions comin soon")
     article.save()
 
     articles = Article.objects.order_by('created_date').reverse()

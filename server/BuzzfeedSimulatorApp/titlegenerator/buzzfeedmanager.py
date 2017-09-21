@@ -26,7 +26,7 @@ class BuzzfeedManager:
         return unique
 
 
-if __name__ == '__main__':
-    buzzfeed = BuzzfeedManager('lol')
-    buzzfeed.read_titles()
+# if __name__ == '__main__':
+#     buzzfeed = BuzzfeedManager('lol')
+#     buzzfeed.read_titles()
     # print buzzfeed.buzzfeed_json['buzzes'][7]['title']

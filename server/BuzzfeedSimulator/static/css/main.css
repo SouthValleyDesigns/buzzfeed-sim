@@ -1,0 +1,518 @@
+@font-face {
+  font-family: 'oregonregular';
+  src: url("/static/fonts/oregon-webfont.eot");
+  src: url("/static/fonts/oregon-webfont.eot?#iefix") format("embedded-opentype"), url("/static/fonts/oregon-webfont.woff2") format("woff2"), url("/static/fonts/oregon-webfont.woff") format("woff"), url("/static/fonts/oregon-webfont.ttf") format("truetype"), url("/static/fonts/oregon-webfont.svg#oregonregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 53, ../sass/_mixins.scss */
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 62, ../sass/_mixins.scss */
+.noselect-recursive *, .noselect-recursive * *, .noselect-recursive {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+/* line 144, ../sass/_mixins.scss */
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+/* line 148, ../sass/_mixins.scss */
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+
+/* line 152, ../sass/_mixins.scss */
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+/* line 157, ../sass/_mixins.scss */
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+/* line 161, ../sass/_mixins.scss */
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 167, ../sass/_mixins.scss */
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* line 171, ../sass/_mixins.scss */
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+/* line 3, ../sass/main.scss */
+html, body {
+  font-family: 'Roboto', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* line 12, ../sass/main.scss */
+a {
+  text-decoration: none !important;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* line 17, ../sass/main.scss */
+strong {
+  color: #00355f;
+}
+
+/* line 21, ../sass/main.scss */
+.navbar {
+  border: 0px;
+  min-height: 0;
+  -o-transition: 0.25s;
+  -ms-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+/* line 28, ../sass/main.scss */
+.navbar.scrolldown {
+  background-color: #00355f !important;
+}
+
+/* line 32, ../sass/main.scss */
+.navbar-brand {
+  padding: 0;
+}
+
+/* line 36, ../sass/main.scss */
+.navbar-brand img {
+  max-width: 400px;
+  width: 95%;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 43, ../sass/main.scss */
+  .navbar {
+    border: 0px;
+  }
+
+  /* line 47, ../sass/main.scss */
+  .navbar-header {
+    padding: 15px;
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* line 54, ../sass/main.scss */
+  .navbar-brand {
+    width: 75% !important;
+    float: none;
+  }
+}
+/* line 60, ../sass/main.scss */
+.header {
+  background-position: center;
+  text-align: center;
+  color: white;
+  height: 80vh;
+}
+
+/* line 68, ../sass/main.scss */
+.autoscroll {
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+  position: absolute;
+}
+/* line 74, ../sass/main.scss */
+.autoscroll a {
+  bottom: 0;
+  color: white;
+  text-decoration: none;
+}
+/* line 80, ../sass/main.scss */
+.autoscroll .scrollbox {
+  top: 0;
+}
+/* line 83, ../sass/main.scss */
+.autoscroll .scrollbox .glyphicon {
+  font-size: 25px;
+}
+/* line 88, ../sass/main.scss */
+.autoscroll .scrolldown {
+  font-size: 3em;
+  position: absolute;
+  margin-left: -19px;
+  margin-bottom: -14px;
+}
+/* line 95, ../sass/main.scss */
+.autoscroll .scrolldownarrow {
+  font-size: 1.3em;
+  z-index: -1;
+  display: block;
+}
+
+/* line 102, ../sass/main.scss */
+h1 {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.20;
+  font-weight: 700;
+  opacity: 1.0;
+  letter-spacing: -0.72px;
+  word-spacing: 0;
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* line 114, ../sass/main.scss */
+h2 {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  font-weight: 600;
+  opacity: 1.0;
+  letter-spacing: -0.72px;
+  word-spacing: 0;
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+/* line 126, ../sass/main.scss */
+h3 {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  opacity: 0.9;
+  letter-spacing: 0;
+  word-spacing: 0;
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+/* line 138, ../sass/main.scss */
+span, p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 2;
+  font-weight: 400;
+  opacity: 0.7;
+  letter-spacing: -0.06px;
+  word-spacing: 0;
+  text-transform: none;
+  margin-top: 0;
+}
+
+/* line 149, ../sass/main.scss */
+html, body {
+  width: 100%;
+  margin: 0;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 157, ../sass/main.scss */
+.main-content {
+  padding-top: 0px !important;
+  text-align: center;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* line 186, ../sass/main.scss */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 191, ../sass/main.scss */
+.text-container {
+  color: #ffffff;
+}
+
+/* line 195, ../sass/main.scss */
+.row {
+  flex-direction: row;
+}
+
+/* line 199, ../sass/main.scss */
+.section {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 210, ../sass/main.scss */
+.section:first-child {
+  height: 90vh;
+}
+
+/* line 214, ../sass/main.scss */
+.section:not(:first-child) {
+  padding-top: 125px;
+  padding-bottom: 40px;
+  background-color: #f3f3f3;
+}
+
+/* line 220, ../sass/main.scss */
+.profile-pic {
+  transition: .5s;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.75em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* line 228, ../sass/main.scss */
+.profile-pic:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-transform: translate3d(0, -5%, 0);
+  transform: translate3d(0, -5%, 0);
+}
+
+@media (max-width: 640px) {
+  /* line 235, ../sass/main.scss */
+  .profile-pic {
+    display: none;
+  }
+}
+/* line 240, ../sass/main.scss */
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+  margin-right: 15px;
+}
+
+/* line 248, ../sass/main.scss */
+.profile-pic, .front, .back {
+  width: 144px;
+  height: 144px;
+  border-radius: 50% !important;
+}
+
+/* line 254, ../sass/main.scss */
+.card-link:hover {
+  color: black;
+}
+
+/* line 258, ../sass/main.scss */
+.paragraph-text {
+  width: 60%;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+/* line 264, ../sass/main.scss */
+.card {
+  padding: 20px;
+}
+
+/* line 270, ../sass/main.scss */
+#works a {
+  color: black;
+}
+/* line 274, ../sass/main.scss */
+#works a:hover {
+  color: #006ec5;
+}
+
+/* line 279, ../sass/main.scss */
+#toolbox {
+  background-attachment: fixed;
+  background-image: url("../images/Scenic Southern Oregon 2013  Beautifulvista.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* line 280, ../sass/main.scss */
+#toolbox .row {
+  padding-bottom: 30px;
+}
+/* line 283, ../sass/main.scss */
+#toolbox h1 {
+  color: white;
+}
+
+/* line 292, ../sass/main.scss */
+#resume .card {
+  border: 0px;
+  padding: 20px;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+/* line 299, ../sass/main.scss */
+#resume .card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  -webkit-transform: translate3d(0, -0.5%, 0);
+  transform: translate3d(0, -0.5%, 0);
+}
+
+/* line 306, ../sass/main.scss */
+footer {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #ee3824;
+  background-color: white;
+}
+/* line 308, ../sass/main.scss */
+footer a {
+  color: #ee3824;
+}
+/* line 312, ../sass/main.scss */
+footer a:hover {
+  color: gray !important;
+}
+/* line 316, ../sass/main.scss */
+footer div {
+  text-align: center !important;
+}
+/* line 320, ../sass/main.scss */
+footer .bs-docs-footer-links {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+/* line 324, ../sass/main.scss */
+footer .bs-docs-footer-links li {
+  display: inline-block;
+}
+/* line 327, ../sass/main.scss */
+footer .bs-docs-footer-links li + li {
+  margin-left: 15px;
+}
