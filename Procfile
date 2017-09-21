@@ -1,1 +1,1 @@
-web: gunicorn server.BuzzfeedSimulator.wsgi --log-file -
+web: gunicorn BuzzfeedSimulator.wsgi --log-file -
