@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from .models import Article
-from titlegenerator import BuzzfeedSimulator
+from .utils import BuzzfeedSimulator
 from django.shortcuts import render
 
 app = BuzzfeedSimulator()
