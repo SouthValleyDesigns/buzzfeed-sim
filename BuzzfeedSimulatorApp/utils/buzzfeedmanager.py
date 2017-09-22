@@ -4,6 +4,7 @@ import requests
 class BuzzfeedManager:
     def __init__(self, query):
         self.query = query
+        self.titles = []
 
     def get(self, page):
         r = requests.get('http://www.buzzfeed.com/api/v2/feeds/' + self.query + '?p=' + str(page))
@@ -13,16 +14,17 @@ class BuzzfeedManager:
 
     def read_titles(self, pages=50):
         seen = set()
-        unique = []
 
         for page in range(pages):
             for buzz in self.get(page)['buzzes']:
                 title = buzz['title']
                 title = title.replace('&quot;', '\'')
+                title = title.encode('utf-8')
                 if title not in seen:
-                    unique.append(title)
+                    self.titles.append(title)
                     seen.add(title)
-        return unique
+
+        return self.titles
 
 
 if __name__ == '__main__':

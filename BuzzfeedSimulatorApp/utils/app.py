@@ -5,12 +5,17 @@ from .buzzfeedmanager import BuzzfeedManager
 
 
 class BuzzfeedSimulator:
-    def run(self):
-        mc = MarkovChain(1)
-        manager = BuzzfeedManager('index')
-        training_data = manager.read_titles()
+    def __init__(self):
+        self.manager = BuzzfeedManager('index')
+        self.training_data = self.manager.read_titles()
 
-        for title in training_data:
+    def train(self):
+        self.training_data = self.manager.read_titles()
+
+    def run(self):
+        mc = MarkovChain(2)
+
+        for title in self.training_data:
             mc.add_string(title)
 
         markovOut = ' '.join(mc.generate_text(50))

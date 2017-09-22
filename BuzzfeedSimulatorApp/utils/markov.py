@@ -56,9 +56,12 @@ class MarkovChain:
         output = []
         if len(self.lookup_dict) > 0:
             self.__seed_me(rand_seed=len(self.lookup_dict))
-            #  idx = random.randint(0, len(self.lookup_dict) - 1)
-            # chain_head = list(self.lookup_dict.keys()[idx])
-            chain_head = list(str(random.randint(0,20)).encode('utf-8'))
+
+            # if bool(random.getrandbits(1)):
+            idx = random.randint(0, len(self.lookup_dict) - 1)
+            chain_head = list(self.lookup_dict.keys()[idx])
+            # else:
+            # chain_head = list(str(random.randint(10,20)).encode('utf-8'))
             context.extend(chain_head)
 
             while len(output) < (max_length - self.key_words):
