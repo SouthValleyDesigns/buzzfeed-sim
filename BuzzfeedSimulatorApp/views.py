@@ -33,8 +33,6 @@ def index(request):
 def create(request):
     title = app.run()
     image = scraper.get_image(title)
-    print title
-    print image
 
     article = Article(title=title.encode('utf-8'), image_url=image, content="Descriptions comin soon")
     article.save()

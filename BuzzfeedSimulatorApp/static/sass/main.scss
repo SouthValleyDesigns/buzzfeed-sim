@@ -58,8 +58,8 @@ strong {
 }
 
 .header {
-    @include backgroundImage("/static/images/logo.png");
-    // background-position: center;
+    @include backgroundImage('https://ak2.picdn.net/shutterstock/videos/1457272/thumb/1.jpg');
+    background-attachment: fixed;
     text-align: center;
     color: white;
     height: 80vh;
@@ -236,15 +236,8 @@ html, body {
     padding: 20px;
 }
 
-#works {
-
-    a {
-        color: black;
-    }
-
-    a:hover {
-        color: (lighten(rgb(0,53,95), 20%));
-    }
+#articles {
+    padding-top: 5% !important;
 }
 
 #toolbox {

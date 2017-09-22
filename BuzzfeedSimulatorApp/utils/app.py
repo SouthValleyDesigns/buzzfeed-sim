@@ -7,7 +7,10 @@ from .buzzfeedmanager import BuzzfeedManager
 class BuzzfeedSimulator:
     def __init__(self):
         self.manager = BuzzfeedManager('index')
-        self.training_data = self.manager.read_titles()
+        self.training_data = []
+
+        if not self.training_data:
+            self.training_data = self.manager.read_titles()
 
     def train(self):
         self.training_data = self.manager.read_titles()
