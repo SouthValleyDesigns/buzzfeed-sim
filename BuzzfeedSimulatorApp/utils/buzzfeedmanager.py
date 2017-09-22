@@ -29,4 +29,4 @@ class BuzzfeedManager:
 
 if __name__ == '__main__':
     buzzfeed_index = BuzzfeedManager('index')
-    print buzzfeed_index.read_titles()
+    # print buzzfeed_index.read_titles()
