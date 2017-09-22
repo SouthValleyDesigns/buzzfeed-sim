@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/evanhopper-moore/Coding/buzzfeed-sim/venv"
+VIRTUAL_ENV="/Users/matthewjordan/Code/buzzfeed-sim/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -25,4 +25,5 @@ class ImageScraper:
             link , Type =json.loads(a.text)["ou"]  ,json.loads(a.text)["ity"]
             ActualImages.append((link,Type))
 
-        return ActualImages[0][0]
+        if ActualImages:
+            return ActualImages[0][0]
